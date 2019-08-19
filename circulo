@@ -1,0 +1,22 @@
+// circulo.cpp : Defines the entry point for the console application.
+//autor:enrique aguirre
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" //getch
+
+using namespace std;
+
+void main()
+{
+	float r,p,a;
+	//pedir variable
+	cout<<"ingrese el radio: ";
+	cin>>r;
+	
+	//proceso
+	a = 3.1416*(r*r);
+	cout<<"el area es: "<<a;
+	getch();
+}
+	
