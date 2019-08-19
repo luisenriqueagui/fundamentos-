@@ -1,0 +1,24 @@
+// cuadrado.cpp : Defines the entry point for the console application.
+//autor:enrique aguirre
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" //getch
+
+using namespace std;
+
+void main()
+{
+	float h,b,a;
+	//pedir la primera variable
+	cout<<"ingrese la primera variable: ";
+	cin>>b;
+	//pedir la segunda variable
+	cout<<"ingreso la segunda variable: ";
+	cin>>h;
+	//proceso
+	a = b*h;
+	cout<<"el area es: "<<a;
+	getch();
+}
+	
