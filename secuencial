@@ -1,0 +1,28 @@
+# fundamentos-programacion
+// notas.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	float p1,p2,p3,parciales,examenfinal,ef,proyectofinal,pf,notafinal;
+	cout<<"ingrese el p1: "; cin>>p1;
+	cout<<"ingrese el p2: "; cin>>p2;
+	cout<<"ingrese el p3: "; cin>>p3;
+	cout<<"ingrese el examenfinal: "; cin>>examenfinal;
+	cout<<"ingrese el proyectofinal: "; cin>>proyectofinal;
+	parciales= ((p1+p2+p3)/3)*0.40;
+	ef= (examenfinal)*0.40;
+	pf= (proyectofinal)*0.20;
+	notafinal= parciales+ef+pf;
+	cout<<"la nota final es: "<<notafinal<<endl;
+
+
+
+	getch();
+}
