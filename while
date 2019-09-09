@@ -1,0 +1,22 @@
+# fundamentos-programacion
+// for.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	int i=1,n;
+	cout<<"ingrese n numeros";
+	cin>>n;
+	while(i<=n)
+	{ sum=sum+i;
+	i++;
+	}
+	cout<<"la suma es: "<<sum;
+	
+	getch();
+}
