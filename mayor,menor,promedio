@@ -21,8 +21,9 @@ void main()
 		suma=suma+numero;
 	}
 	   promedio=suma/n;
+	   cout<<"ingrese el mayor:"<<mayor<<endl<<;
+	   cout<<"ingrese el menor:"<<menor<<endl<<;
 	   cout<<"ingrese el promedio:"<<promedio<<endl<<;
-	
-		
-		getch();
+		  
+	   getch();
 }
