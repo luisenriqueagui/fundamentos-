@@ -1,0 +1,24 @@
+# fundamentos-programacion
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+ void main()
+ {
+	int numero,digito,con=0,contoctal=0;
+	cout<<"ingrese un  numero: ";
+    cin>>numero;
+	while(numero>0)
+	{
+		digito=numero%10;
+		if((digito<8)&&(digito>=0))
+			contoctal++;
+		con++;
+		numero=numero/10;
+	}
+	if(con==contoctal){
+		cout<<"es un numero octal:";<<endl;
+	}
+	getch();
+ }
