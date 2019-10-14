@@ -1,0 +1,20 @@
+# fundamentos-programacion
+// serie.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+ void main()
+ {
+	 int n,con=0;
+	 cout<<"ingrese n:"<<endl;
+	 cin>>n;
+	 for(int i=(n-1)/2; i>=0; i=i-1){
+		 cout<<con+1<<".-"<<(2*i+1)<<endl;
+		 con++;
+	 }
+	 getch();
+ }
