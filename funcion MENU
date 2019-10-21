@@ -1,0 +1,69 @@
+# fundamentos-programacion
+// menu.cpp : Defines the entry point for the console application.
+//la llamada a la funcion
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+ float calculoperimetro(float r);
+ float calculoarea(float r);
+ float calculovolumen(float r);
+ float calculodiametro(float r);
+
+ void main()
+ {
+	 float r,a;
+	 int op;
+	 do{
+		//presentar menu
+		 cout<<endl<<"ingrese el radio: ";
+		 cin>>r;
+		 cout<<"----MENU----"<<endl;
+		 cout<<"1. calcular el perimetro"<<endl;
+		 cout<<"2. calcular el area"<<endl;
+		 cout<<"3. calcular el volumen"<<endl;
+		 cout<<"4. calcular el diametro"<<endl;
+		 cout<<"5.salir"<<endl;
+		 cout<<"ingrese opcion(1..4)"<<endl;
+		 //seleccionar la opcion
+		 cin>>op;
+		 switch(op) {
+		 case 1: cout<< calculoperimetro(r); //mostrar y calcula
+			 break;
+		 case 2: cout<< calculoarea(r); break;
+		 case 3: cout<< calculovolumen(r); break;
+		 case 4: cout<< calculodiametro(r); break;
+		 case 5: cout<<"salir"<<endl; break;
+		 default: cout<<"error"<<endl; break;
+		 }
+	 }while(op=!4);
+	 getch();
+ }
+
+ float calculoperimetro(float r)
+ {
+	 float p;
+	 p=2*3.141516*r;
+	 return p;
+ }
+ float calculoarea(float r)
+ {
+	 float aux;
+	 aux=2*3.141516*r*r;
+	 return aux;
+ }
+ float calculovolumen(float r)
+ {
+	 float v;
+	 v=(4/3)*3.141516*r*r*r;
+	 return v;
+ }
+ float calculodiametro(float r)
+ {
+	 float d;
+     d=r*2;
+	 return d;
+ }
