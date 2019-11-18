@@ -1,0 +1,28 @@
+# fundamentos-programacion
+// pruyebs.cpp : Defines the entry point for the console application.
+//
+// funciones.h
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+float calculoarea(float r);
+int main()
+{
+	float r;
+	cout<<"ingrese el radio "<<endl;
+	cin>>r;
+	cout<<"el area es"<<calculoarea(r);
+	getch();
+	return 0;
+}
+
+float calculoarea(float r)
+
+	{float c;
+    c=3.14*(r*r);
+	return c;
+}
