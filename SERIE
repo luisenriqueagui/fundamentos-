@@ -1,0 +1,34 @@
+# fundamentos-programacion
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+float factorial(int n,int x);//PROTOTIPO
+void main()
+{
+	float n,x;
+	cout<<"ingrese n";
+	cin>>n;
+	cout<<"ingrese x";
+	cin>>x;
+	cout<<"el factorial es"<<factorial(n,x);
+	getch();
+}
+	float factorial(int n,int x){//DECLARAR LA FUNCION
+	
+	float acum=0,fact,i,j;
+	for(int i=1; i<=n; i++)
+	{
+		fact=1;
+		for( int j=1; j<=i; j++)
+		{
+			fact=fact*j;
+		}
+	
+		acum=acum+(powf(x,i))/fact;
+	}
+	cout<<"el resultado es"<<acum;
+	return acum;
+
+}
