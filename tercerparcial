@@ -1,0 +1,98 @@
+# fundamentos-programacion
+// funcionvectores.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h" //para limpiar pantalla
+#define MAX 100
+
+
+using namespace std;
+
+//Prototipos
+
+void cargar (double a[], int tam);
+void mostrar (double a[], int tam);
+double promedio(double a[], int tam);
+void burbuja(double a[],int tam);
+bool busquedalineal(double a[],int k,int &tam,int pos);
+
+void main ()
+{
+	double vec[MAX],prom,k; 
+	int tam,n,pos,op;
+	cout<<"ingrese n";
+	cin>>n;
+    do
+	{
+	
+		cout<<"----MENU----"<<endl;
+		cout<<"1.cargar vector"<<endl;
+		cout<<"2.mostrar vector"<<endl;
+		cout<<"3.promedio"<<endl;
+		cout<<"4.burbuja"<<endl;
+		cout<<"5.busqueda lineal"<<endl;
+		cout<<"6.salir"<<endl;
+		cout<<"ingrese una opcion del(1...4)"<<endl;
+		cin>>op;
+		switch(op)
+		{
+		case 1: cargar(vec,n);break;
+		case 2: mostrar(vec,n);break;
+		case 3: promedio(vec,n);break;
+		case 4: burbuja(vec,n);break;
+		case 5: 
+			cout<<"ingrese el valor buscado: "<<endl;
+			cin>>k;
+			if(busquedalineal(vec,k,n,pos))
+			cout<<"el elmento buscado esta en la posicion: "<<pos<<endl;
+			else
+				cout<<"no existe"<<endl;break;
+
+		case 6: cout<<"salir"<<endl;break;
+		default:cout<<"error"<<endl;break;
+		}
+
+	}while(op=!6);
+	getch();
+}
+void cargar (double a[], int tam)
+	{
+	for(int i=0;i<tam;i++)
+	{
+		cout<<"a["<<i<<"]= ";
+		cin>> a[i];
+	}
+}
+void mostrar (double a[], int tam)
+	{
+	cout << endl<<"Vector clasificado ascendentemente"<<endl;
+	for(int i=0;i<tam;i++)
+		cout<<"a["<<i<<"]= "<<a[i]<<endl;
+}
+double promedio(double a[], int tam)
+	{   double p=0;
+	for(int i=0;i<tam;i++)
+		p=p+a[i];
+	return p/tam;   // La función devuelve un valor
+}
+void burbuja(double a[],int tam)
+{
+	int aux,m;
+	for(int i=0;i<tam-1;i++) {
+		for(int j=i+1;j<tam;j++)             
+		{
+			if(a[i]>a[j])
+			{
+
+
+
+
+
+
+
+
+
+
