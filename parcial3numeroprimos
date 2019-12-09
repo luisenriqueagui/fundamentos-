@@ -1,0 +1,38 @@
+# fundamentos-programacion
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+bool numeroprimo(int n);
+   
+void main()
+{
+  int n;
+  bool primo;
+  cout<<"ingrese n:"<<endl;
+  cin>>n;
+  primo=numeroprimo(n);
+  if (primo)
+	  cout<<"es numero primo"<<endl;
+  else 
+	  cout<<"no es numero primo"<<endl;
+  getch();
+}
+  bool numeroprimo(int n){
+	  bool primo = false;
+	  int i=1,cont=0;
+		  while(i<=n){
+			  if (n % i == 0) {
+              cont++;
+           }
+             i = i + 1;
+         }
+           if (cont == 2) {
+           primo = true;
+       }
+          return primo;
+}
+			
+
+	  
