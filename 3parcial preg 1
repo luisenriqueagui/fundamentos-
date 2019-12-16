@@ -1,0 +1,67 @@
+# fundamentos-programacion
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+//prototipos
+void cargar(int a[],int tam);
+void mostrar(int a[],int tam);
+void burbuja(int a[],int tam);
+void unir(int a[],int n,int b[],int m,int c[],int tam);
+
+void main()
+{
+	int n,m,tam,A[MAX],B[MAX],C[MAX];
+	do{
+		cout<<"ingrea el numero de elementos A:";
+		cin>>n;
+	}while((n>MAX)||(n<=0));
+	cargar(A,n);
+	do{
+		cout<<"ingrese el numero de elementos B:";
+		cin>>m;
+		}while((m>MAX)||(m<=0));
+		cargar(B,m);
+		tam=n+m;
+		unir(A,n,B,m,C,tam);
+		burbuja(C,tam);
+        mostrar(C,tam);
+		getch();
+	
+	}
+
+void cargar(int a[],int tam){
+	for(int i=0;i<tam;i++){
+		cout<<"a["<<i<<"]=";
+		cin>> a[i];
+	}
+}
+void mostrar(int a[],int tam){
+	for(int i=0;i<tam;i++){
+		cout<<"a["<<i<<"]="<<a[i]<<endl;
+
+	}
+}
+	void burbuja(int a[],int tam) {
+		int aux;
+		for(int i=0;i<tam-1;i++)
+			for(int j=i+1;j<tam;j++)
+				if(a[i]>a[j])
+				{
+					aux=a[i];
+					a[i]=a[j];
+					a[j]=aux;
+				}
+	}
+
+	void unir(int a[],int n,int b[],int m,int c[],int tam){
+		for(int i=0;i<n;i++)
+			c[i]=a[i];
+		for(int i=0;i<m;i++)
+			c[i+n]=b[i]; //se trespasa en el vector c despues de a por eso n
+	}
+			
