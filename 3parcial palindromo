@@ -1,0 +1,31 @@
+# fundamentos-programacion
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+ void main()
+ {
+	 string nombre,var2;
+	 int longitud;
+	 char aux;
+	 
+	 getline(cin,nombre);
+	 var2=nombre;
+	 longitud=nombre.length();
+	 for(int i=0;i<longitud/2;i++){
+		 //intercambio entre elementos del string
+		 aux=nombre[i];
+		 nombre[i]=nombre[longitud-1-i];
+		 nombre[longitud-1-i]=aux;
+	 }
+	 cout<<"la cadena invertida es:"<<nombre<<endl;
+
+	 if(var2.compare(nombre)==0)
+		 cout<<"es palindromo:";
+	 else cout<<"no es palindromo:";
+	 getch();
+ }
+
